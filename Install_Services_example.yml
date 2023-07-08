@@ -1,0 +1,14 @@
+---
+- name: Install Services 
+  hosts: app_servers
+  gather_facts: yes
+  become: yes
+  vars:
+    pck:
+      - npm  
+  tasks:
+
+    - name: Install Services
+      apt:
+        name: "{{ pck }}"
+        state: present
