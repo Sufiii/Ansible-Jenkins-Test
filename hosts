@@ -11,6 +11,11 @@
 # Ex 1: Ungrouped hosts, specify before any group headers.
 [app_server]
 192.168.0.108
+
+[app_server:vars]
+ansible_user=sufi
+ansible_password=12345
+
 #green.example.com
 #blue.example.com
 #192.168.100.1
